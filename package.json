@@ -1,0 +1,35 @@
+{
+  "name": "social-media-app",
+  "version": "0.0.1",
+  "description": "Social media app course assignment for noroff",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "sass src/scss:dist/css",
+    "watch": "sass --watch src/scss:dist/css & live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joakimlees/joakim-lee-sletten-css-frameworks-ca.git"
+  },
+  "keywords": [
+    "social",
+    "media",
+    "bootstrap",
+    "sass",
+    "css-frameworks"
+  ],
+  "author": "Joakim Lee Sletten <joakimlee_sletten@outlook.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joakimlees/joakim-lee-sletten-css-frameworks-ca/issues"
+  },
+  "homepage": "https://github.com/joakimlees/joakim-lee-sletten-css-frameworks-ca#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.54.5"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0"
+  }
+}
