@@ -10,15 +10,11 @@ This is my course assignment for css-frameworks at noroff
 
 ### Home page
 
-The Homepage should have:
-
 - A feed of posts from the user’s contacts
 - A search bar
 - A form to create a new post
 
 ### Profile page
-
-The profile page should have:
 
 - A profile image
 - Details about the user
@@ -27,8 +23,6 @@ The profile page should have:
 - A form to post to their wall.
 
 ### Login page
-
-The login page should have:
 
 - A form to login to the application
 
