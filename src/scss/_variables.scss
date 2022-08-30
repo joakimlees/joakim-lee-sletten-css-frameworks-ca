@@ -6,7 +6,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
-) !default;
+);
 // scss-docs-end grid-breakpoints
 
 // scss-docs-start container-max-widths
@@ -17,3 +17,20 @@ $container-max-widths: (
   xl: 960px,
   xxl: 960px,
 );
+
+// scss-docs-start color-variables
+$blue: #060080;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #5c0605;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #079151;
+$teal: #20c997;
+$cyan: #0dcaf0;
+$black: #0d0a01;
+$white: #fffef0;
+// scss-docs-end color-variables
+
+$secondary: $black;
