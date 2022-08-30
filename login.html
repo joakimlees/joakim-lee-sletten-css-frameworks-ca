@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="login page for SoMe | social media app |" />
+    <title>SoMe | login</title>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+  </head>
+  <body>
+    <header class="border-bottom border-primary d-flex justify-content-center">
+      <a class="text-decoration-none" href="#">SoMe</a>
+    </header>
+    <main class="bg-secondary container-sm pt-5 vh-100">
+      <div class="text-center">SoMe-logo</div>
+      <h1 class="text-white text-center">Login to SoMe</h1>
+      <form class="login-form-container mx-auto">
+        <div class="mt-5">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" />
+        </div>
+        <div class="d-grid mx-auto">
+          <button type="submit" class="btn btn-primary">Login</button>
+        </div>
+      </form>
+      <div class="d-grid mx-auto mt-4 login-form-container">
+        <h2 class="text-center">New user?</h2>
+        <a class="btn btn-primary" href="">Register new user</a>
+      </div>
+    </main>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

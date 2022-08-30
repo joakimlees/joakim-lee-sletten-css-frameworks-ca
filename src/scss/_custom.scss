@@ -1,0 +1,7 @@
+@mixin width-container($width) {
+  max-width: $width;
+}
+
+.login-form-container {
+  @include width-container(350px);
+}
