@@ -2,6 +2,10 @@
   max-width: $width;
 }
 
-.login-form-container {
+.form-container {
   @include width-container(350px);
+}
+
+.post-container {
+  @include width-container(550px);
 }
