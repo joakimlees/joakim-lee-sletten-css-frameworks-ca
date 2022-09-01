@@ -1,3 +1,5 @@
+//Mixins
+
 @mixin width-container($width) {
   max-width: $width;
 }
@@ -9,3 +11,15 @@
 .post-container {
   @include width-container(550px);
 }
+
+//maps
+
+$test: $gray-300;
+
+// Create your own map
+$custom-colors: (
+  "test": $test,
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
