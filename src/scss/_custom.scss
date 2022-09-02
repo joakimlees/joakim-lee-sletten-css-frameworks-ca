@@ -21,6 +21,7 @@
 
 //maps
 
+/*
 $test: $gray-300;
 
 //custom maps
@@ -29,5 +30,5 @@ $custom-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
-
+*/
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

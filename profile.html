@@ -11,8 +11,33 @@
     <header class="border-bottom bg-primary d-flex justify-content-center">
       <a class="text-decoration-none text-dark" href="#">SoMe</a>
     </header>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-bottom bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">SoMe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/profile.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/login.html">Logout</a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <button class="btn btn-dark" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
     <main class="container vh-100">
-      <div class="row p-3">
+      <section class="row p-3 mt-3">
         <div class="col">
           <h1 class="row">@Username</h1>
           <p class="row">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi facere aperiam corrupti reprehenderit hic reiciendis laudantium perferendis minus expedita, esse, maxime rem dolorem, eum dolores quos nulla odit eveniet natus.</p>
@@ -20,17 +45,18 @@
         <div class="col col-md-4">
           <img class="profile-image" src="/images/Joakim_fullstakk.jpg" alt="" />
         </div>
-      </div>
-      <section class="container p-3">
+      </section>
+      <section class="container p-3 mb-5">
         <h2>Contacts</h2>
         <ul class="row list-unstyled ms-1">
           <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
           <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
           <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
         </ul>
+        <a class="link" href="#">See all contacts</a>
       </section>
       <form action="#">
-        <div class="mb-3 rounded shadow-sm">
+        <div class="mb-3 rounded">
           <label for="post" class="form-label">Write new post</label>
           <textarea class="form-control" id="post" rows="3"></textarea>
         </div>
@@ -38,60 +64,49 @@
           <button type="button" class="btn btn-primary">Publish post</button>
         </div>
       </form>
-      <div class="my-3 p-3 rounded shadow-sm">
-        <div class="row pt-3">
-          <div class="col">
-            <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-          </div>
-          <div class="col-9 col-md-10 col-lg-11">
-            <p class="pb-3 lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">@username</strong>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="my-3 p-3 rounded shadow-sm">
-        <div class="row pt-3">
-          <div class="col">
-            <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-          </div>
-          <div class="col-9 col-md-10 col-lg-11">
-            <p class="pb-3 small lh-sm border-bottom">
-              <strong class="d-block text-gray-dark">@username</strong>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt blanditiis temporibus nisi assumenda rem consequatur in, vel impedit eius! Neque eveniet, sit magni consectetur ea minima cum animi quod rem.
-            </p>
+      <section class="my-5">
+        <h2>Your posts</h2>
+        <div class="my-5 p-3 rounded shadow-sm">
+          <div class="row pt-3">
+            <div class="col">
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+              <p class="pb-4 lh-sm border-bottom">
+                <strong class="d-block text-gray-dark">@username</strong>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+        <div class="my-3 p-3 rounded shadow-sm">
+          <div class="row pt-3">
+            <div class="col">
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+              <p class="pb-4 lh-sm border-bottom">
+                <strong class="d-block text-gray-dark">@username</strong>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="my-3 p-3 rounded shadow-sm">
+          <div class="row pt-3">
+            <div class="col">
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+              <p class="pb-4 lh-sm border-bottom">
+                <strong class="d-block text-gray-dark">@username</strong>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <div class="container">
-      <nav class="navbar navbar-expand-md navbar-dark fixed-bottom bg-primary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="/index.html">SoMe</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/profile.html">Profile</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" href="/login.html">Logout</a>
-              </li>
-            </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button class="btn btn-dark" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </div>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
