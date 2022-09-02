@@ -1,25 +1,33 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
 //Mixins
-
-@mixin width-container($width) {
-  max-width: $width;
+@mixin width($width, $mwidth) {
+  width: $width;
+  max-width: $mwidth;
 }
 
-.form-container {
-  @include width-container(350px);
+.profile-image {
+  @include width(100%, 150px);
 }
 
-.post-container {
-  @include width-container(550px);
+.container-small {
+  @include width(auto, 450px);
+}
+
+.contact-image {
+  @include width(100%, 100px);
 }
 
 //maps
 
 $test: $gray-300;
 
-// Create your own map
+//custom maps
 $custom-colors: (
   "test": $test,
 );
 
-// Merge the maps
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";

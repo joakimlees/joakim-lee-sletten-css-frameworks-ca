@@ -11,26 +11,25 @@
     <header class="border-bottom bg-primary d-flex justify-content-center">
       <a class="text-decoration-none text-dark" href="#">SoMe</a>
     </header>
-    <main class="border container-sm vh-100">
-      <div class="row">
+    <main class="container vh-100">
+      <div class="row p-3">
         <div class="col">
-          <h1 class="col">@Username</h1>
+          <h1 class="row">@Username</h1>
+          <p class="row">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi facere aperiam corrupti reprehenderit hic reiciendis laudantium perferendis minus expedita, esse, maxime rem dolorem, eum dolores quos nulla odit eveniet natus.</p>
         </div>
-        <img class="col" src="/images/Joakim_fullstakk.jpg" alt="" />
+        <div class="col col-md-4">
+          <img class="profile-image" src="/images/Joakim_fullstakk.jpg" alt="" />
+        </div>
       </div>
-      <section class="container">
+      <section class="container p-3">
         <h2>Contacts</h2>
-        <ul class="row">
-          <li class="col"><img class="card-img" src="/images/Hege_fullstakk.jpg" alt="" /></li>
-
-          <li class="col"><img class="card-img" src="/images/Hege_fullstakk.jpg" alt="" /></li>
-          <li class="col"><img class="card-img" src="/images/Hege_fullstakk.jpg" alt="" /></li>
-          <li class="col"><img class="card-img" src="/images/Hege_fullstakk.jpg" alt="" /></li>
-          <li class="col"><img class="card-img" src="/images/Hege_fullstakk.jpg" alt="" /></li>
+        <ul class="row list-unstyled ms-1">
+          <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
+          <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
+          <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
         </ul>
       </section>
       <form action="#">
-        <label for="post">new post</label>
         <div class="mb-3 rounded shadow-sm">
           <label for="post" class="form-label">Write new post</label>
           <textarea class="form-control" id="post" rows="3"></textarea>
@@ -39,51 +38,50 @@
           <button type="button" class="btn btn-primary">Publish post</button>
         </div>
       </form>
-      <div class="my-3 p-3 bg-body rounded shadow-sm">
+      <div class="my-3 p-3 rounded shadow-sm">
         <div class="row pt-3">
           <div class="col">
-            <img class="rounded card-img" src="/images/Hege_fullstakk.jpg" alt="#" />
+            <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
           </div>
-          <div class="col-9 col-sm-10 col-md-11">
-            <p class="pb-3 mb-0 small lh-sm border-bottom">
+          <div class="col-9 col-md-10 col-lg-11">
+            <p class="pb-3 lh-sm border-bottom">
               <strong class="d-block text-gray-dark">@username</strong>
-              Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
             </p>
           </div>
         </div>
       </div>
-      <div class="my-3 p-3 bg-body rounded shadow-sm">
-        <div class="d-flex text-muted pt-3">
-          <svg class="bd-placeholder-img flex-shrink-0 me-2 rounded" width="32" height="32" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 32x32" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <title>Placeholder</title>
-            <rect width="100%" height="100%" fill="#007bff" />
-            <text x="50%" y="50%" fill="#007bff" dy=".3em">32x32</text>
-          </svg>
-
-          <p class="pb-3 mb-0 small lh-sm border-bottom">
-            <strong class="d-block text-gray-dark">@username</strong>
-            Some representative placeholder content, with some information about this user. Imagine this being some sort of status update, perhaps?
-          </p>
+      <div class="my-3 p-3 rounded shadow-sm">
+        <div class="row pt-3">
+          <div class="col">
+            <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+          </div>
+          <div class="col-9 col-md-10 col-lg-11">
+            <p class="pb-3 small lh-sm border-bottom">
+              <strong class="d-block text-gray-dark">@username</strong>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt blanditiis temporibus nisi assumenda rem consequatur in, vel impedit eius! Neque eveniet, sit magni consectetur ea minima cum animi quod rem.
+            </p>
+          </div>
         </div>
       </div>
     </main>
-    <div class="container-sm">
+    <div class="container">
       <nav class="navbar navbar-expand-md navbar-dark fixed-bottom bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">SoMe</a>
+          <a class="navbar-brand" href="/index.html">SoMe</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Profile</a>
+                <a class="nav-link active" aria-current="page" href="/profile.html">Profile</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
+                <a class="nav-link active" href="/index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active">Logout</a>
+                <a class="nav-link active" href="/login.html">Logout</a>
               </li>
             </ul>
             <form class="d-flex" role="search">

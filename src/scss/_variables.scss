@@ -2,20 +2,20 @@
 $grid-breakpoints: (
   xs: 0,
   sm: 400px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px,
+  md: 650px,
+  lg: 800px,
+  xl: 1000px,
+  xxl: 1200px,
 );
 // scss-docs-end grid-breakpoints
 
 // scss-docs-start container-max-widths
 $container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 960px,
-  xxl: 960px,
+  sm: 400px,
+  md: 500px,
+  lg: 800px,
+  xl: 800px,
+  xxl: 800px,
 );
 
 // scss-docs-start color-variables
