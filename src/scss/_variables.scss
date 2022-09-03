@@ -1,4 +1,3 @@
-// scss-docs-start grid-breakpoints
 $grid-breakpoints: (
   xs: 0,
   sm: 400px,
@@ -7,23 +6,20 @@ $grid-breakpoints: (
   xl: 1000px,
   xxl: 1200px,
 );
-// scss-docs-end grid-breakpoints
 
-// scss-docs-start container-max-widths
 $container-max-widths: (
   sm: 400px,
   md: 500px,
-  lg: 800px,
-  xl: 800px,
+  lg: 700px,
+  xl: 750px,
   xxl: 800px,
 );
 
-$primary: red;
-// scss-docs-start color-variables
-/*
 $purple: #7d9fff;
 $red: #ff615d;
 $yellow: #ffd66e;
 $green: #75ffa1;
 $cyan: #45f6ff;
-*/ // scss-docs-end color-variables
+
+$primary: $cyan;
+$secondary: $purple;

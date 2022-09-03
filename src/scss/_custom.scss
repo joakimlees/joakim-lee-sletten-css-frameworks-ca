@@ -21,14 +21,14 @@
 
 //maps
 
-/*
-$test: $gray-300;
-
+$md-light-gray: $gray-400;
+$md-dark-gray: $gray-700;
 //custom maps
 $custom-colors: (
-  "test": $test,
+  "md-light-gray": $md-light-gray,
+  "md-dark-gray": $md-dark-gray,
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
-*/
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

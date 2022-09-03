@@ -8,20 +8,20 @@
     <title>SoMe | login</title>
     <link rel="stylesheet" href="/dist/css/styles.css" />
   </head>
-  <body>
-    <header class="border-bottom bg-primary d-flex justify-content-center">
+  <body class="bg-md-dark-gray">
+    <header class="bg-primary d-flex justify-content-center">
       <a class="text-decoration-none text-dark" href="#">SoMe</a>
     </header>
     <main class="mx-auto px-4 container-small pt-5 vh-100">
-      <div class="text-center text-secondary">SoMe-logo</div>
-      <h1 class="text-dark text-center">Login to SoMe</h1>
+      <div class="text-center text-primary">SoMe-logo</div>
+      <h1 class="text-white text-center">Login to SoMe</h1>
       <form action="/index.html" class="form-container mx-auto">
         <div class="mt-5">
-          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <label for="exampleInputEmail1" class="form-label text-white">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required />
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <label for="exampleInputPassword1" class="form-label text-white">Password</label>
           <input type="password" class="form-control" id="exampleInputPassword1" required />
         </div>
         <div class="d-grid mx-auto">
@@ -29,10 +29,15 @@
         </div>
       </form>
       <div class="d-grid mx-auto mt-4 form-container">
-        <p class="text-center text-dark">New user?</p>
+        <p class="text-center text-white">New user?</p>
         <a class="btn btn-primary" href="">Create account here</a>
       </div>
     </main>
+    <footer class="py-5 bg-primary">
+      <div class="container">
+        <a class="text-decoration-none text-dark" href="#">SoMe - Contact</a>
+      </div>
+    </footer>
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
