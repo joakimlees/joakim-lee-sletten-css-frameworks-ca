@@ -21,4 +21,15 @@ Dependencies:
 
 ### Task
 
-Make a Social Media app
+Make a Social Media app with login, home and profile page.
+
+### Reflections
+
+I see how using a framework like bootstrap boosts productivity and how useful it is. With that said.
+Familiarizing myself with bootstrap have been the struggle. Guess using it effectively with get better and better over time.
+
+I still struggle to see when it's an good idea to write custom scss styles, and it can be a bit confusing to know whether or not to look for variables to change or to make custom styles is the solution. But i guess that will get better over time as well.
+
+My focus for this project has been on familiarizing myself with bootstrap, and not so much on the visuals or actual design.
+
+Things are making more and more sense, but a lot of it is still a bit of a mace, but I feel like I know whee and how to look for solutions, and thats probably the most important thing.
