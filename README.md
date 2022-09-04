@@ -7,18 +7,6 @@ The course covers:
 - Bootstrap
 - Sass
 
-## Bootstrap & Sass
-
-Node version: 16.17.0
-
-Dev Dependencies:
-live-server": 1.2.2
-sass": 1.54.5
-
-Dependencies:
-"bootstrap": 5.2.0
-"bootstrap-icons": 1.9.1
-
 ### Task
 
 Make a Social Media app with login, home and profile page.
@@ -33,3 +21,27 @@ I still struggle to see when it's an good idea to write custom scss styles, and 
 My focus for this project has been on familiarizing myself with bootstrap, and not so much on the visuals or actual design.
 
 Things are making more and more sense, but a lot of it is still a bit of a mace, but I feel like I know whee and how to look for solutions, and thats probably the most important thing.
+
+## Install and run
+
+Open terminal and run:
+
+npm install
+npm run build
+
+or
+
+npm install
+npm run watch
+
+Further notes:
+
+Node version: 16.17.0
+
+Dev Dependencies:
+live-server": 1.2.2
+sass": 1.54.5
+
+Dependencies:
+"bootstrap": 5.2.0
+"bootstrap-icons": 1.9.1
