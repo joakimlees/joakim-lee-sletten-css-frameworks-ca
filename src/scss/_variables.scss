@@ -1,0 +1,25 @@
+$grid-breakpoints: (
+  xs: 0,
+  sm: 400px,
+  md: 650px,
+  lg: 800px,
+  xl: 1000px,
+  xxl: 1200px,
+);
+
+$container-max-widths: (
+  sm: 400px,
+  md: 500px,
+  lg: 700px,
+  xl: 750px,
+  xxl: 800px,
+);
+
+$purple: #7d9fff;
+$red: #ff615d;
+$yellow: #ffd66e;
+$green: #75ffa1;
+$cyan: #45f6ff;
+
+$primary: $cyan;
+$secondary: $purple;
