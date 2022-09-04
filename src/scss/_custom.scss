@@ -7,6 +7,8 @@
   max-width: $mwidth;
 }
 
+// custom classes
+
 .profile-image {
   @include width(100%, 150px);
 }
@@ -19,7 +21,7 @@
   @include width(100%, 100px);
 }
 
-//maps
+//color maps
 
 $md-light-gray: $gray-400;
 $md-dark-gray: $gray-700;
@@ -30,5 +32,9 @@ $custom-colors: (
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// shadows
+
+$box-shadow-sm: 0 0.15rem 1rem rgba($white, 0.125);
 
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";

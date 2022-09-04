@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="/dist/css/styles.css" />
   </head>
   <body class="bg-md-dark-gray">
-    <header class="border-bottom bg-primary d-flex justify-content-center">
-      <a class="text-decoration-none text-white" href="#">SoMe</a>
+    <header class="bg-primary d-flex justify-content-center border-bottom border-white">
+      <a class="text-decoration-none text-dark" href="#">SoMe</a>
     </header>
     <nav class="navbar navbar-expand-md navbar-light bg-primary">
       <div class="container">
@@ -37,69 +37,101 @@
       </div>
     </nav>
     <main class="container">
-      <section class="row p-3 mt-3">
+      <section class="row p-3 pb-5 mt-3">
         <div class="col">
-          <h1 class="row">@Username</h1>
-          <p class="row">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi facere aperiam corrupti reprehenderit hic reiciendis laudantium perferendis minus expedita, esse, maxime rem dolorem, eum dolores quos nulla odit eveniet natus.</p>
+          <h1 class="row text-primary">@Username</h1>
+          <p class="row text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi facere aperiam corrupti reprehenderit hic reiciendis laudantium perferendis minus expedita, esse, maxime rem dolorem, eum dolores quos nulla odit eveniet natus.</p>
         </div>
         <div class="col col-md-4">
-          <img class="profile-image" src="/images/Joakim_fullstakk.jpg" alt="" />
+          <img class="profile-image rounded shadow-sm" src="/images/Joakim_fullstakk.jpg" alt="" />
         </div>
       </section>
-      <section class="container p-3 mb-5">
-        <h2>Contacts</h2>
+      <section class="container p-3 mb-5 border-top border-bottom border-md-light-gray">
+        <h2 class="text-white">Contacts</h2>
         <ul class="row list-unstyled ms-1">
-          <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
-          <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
-          <li class="col col-lg-2"><img class="row contact-image" src="/images/Hege_fullstakk.jpg" alt="" />@username</li>
+          <a class="col col-lg-2" href="#"
+            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
+          >
+          <a class="col col-lg-2" href="#"
+            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
+          >
+          <a class="col col-lg-2" href="#"
+            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
+          >
         </ul>
         <a class="link" href="#">See all contacts</a>
       </section>
       <form action="#">
         <div class="mb-3 rounded">
-          <label for="post" class="form-label">Write new post</label>
-          <textarea class="form-control" id="post" rows="3"></textarea>
+          <label for="post" class="form-label text-white">Write new post</label>
+          <textarea class="form-control" id="post" rows="3" required></textarea>
         </div>
         <div>
-          <button type="button" class="btn btn-primary">Publish post</button>
+          <button type="submit" class="btn btn-primary">Publish post</button>
         </div>
       </form>
       <section class="my-5">
         <h2>Your posts</h2>
-        <div class="my-5 p-3 rounded shadow-sm">
+        <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-4 lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">@username</strong>
+              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
+                <strong class="d-block text-primary">@username</strong>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
           </div>
         </div>
-        <div class="my-3 p-3 rounded shadow-sm">
+        <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-4 lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">@username</strong>
+              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
+                <strong class="d-block text-primary">@username</strong>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
           </div>
         </div>
-        <div class="my-3 p-3 rounded shadow-sm">
+        <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-4 lh-sm border-bottom">
-                <strong class="d-block text-gray-dark">@username</strong>
+              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
+                <strong class="d-block text-primary">@username</strong>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="my-4 p-3 rounded shadow-sm">
+          <div class="row pt-3">
+            <div class="col">
+              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
+                <strong class="d-block text-primary">@username</strong>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="my-4 p-3 rounded shadow-sm">
+          <div class="row pt-3">
+            <div class="col">
+              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+            </div>
+            <div class="col-8 col-md-9 col-lg-10">
+              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
+                <strong class="d-block text-primary">@username</strong>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
