@@ -30,23 +30,23 @@
               <a class="nav-link" href="/login.html">Logout</a>
             </li>
           </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button class="btn btn-secondary" type="submit">Search</button>
-          </form>
         </div>
       </div>
     </nav>
     <main class="container">
-      <h1 class="mt-5 text-primary">Home</h1>
+      <h1 class="mt-5 mb-5 text-primary">Home</h1>
       <form action="#">
         <div class="mb-3 rounded">
           <label for="post" class="form-label text-white">Write new post</label>
-          <textarea class="post-field" id="post" rows="3" required></textarea>
+          <textarea class="post-field" id="post" rows="3" placeholder="Start writing your post here..." required></textarea>
         </div>
         <div>
           <button type="submit" class="btn btn-primary">Publish post</button>
         </div>
+      </form>
+      <form class="d-flex mt-5" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-primary" type="submit">Search</button>
       </form>
       <section class="my-5">
         <h2 class="text-white">Recent posts</h2>
