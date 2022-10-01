@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoMe | Profile page</title>
-    <meta name="description" content="Profile page for SoMe | social media app" />
+    <title>SoMe | feed</title>
+    <meta name="description" content="Home page for SoMe | social media app" />
     <link rel="stylesheet" href="/dist/css/styles.css" />
   </head>
   <body class="bg-md-dark-gray">
@@ -21,10 +21,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav me-auto mb-2 mb-md-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/profile.html">Profile</a>
+              <a class="nav-link" aria-current="page" href="/profile.html">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/index.html">Home</a>
+              <a class="nav-link active" href="/index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/login.html">Logout</a>
@@ -34,30 +34,7 @@
       </div>
     </nav>
     <main class="container">
-      <section class="row p-3 pb-5 mt-3">
-        <div class="col">
-          <h1 class="row text-primary">@Username</h1>
-          <p class="row text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi facere aperiam corrupti reprehenderit hic reiciendis laudantium perferendis minus expedita, esse, maxime rem dolorem, eum dolores quos nulla odit eveniet natus.</p>
-        </div>
-        <div class="col col-md-4">
-          <img class="profile-image rounded shadow-sm" src="/images/Joakim_fullstakk.jpg" alt="" />
-        </div>
-      </section>
-      <section class="container p-3 mb-5 border-top border-bottom border-md-light-gray">
-        <h2 class="text-white">Contacts</h2>
-        <ul class="row list-unstyled ms-1">
-          <a class="col col-lg-2" href="#"
-            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
-          >
-          <a class="col col-lg-2" href="#"
-            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
-          >
-          <a class="col col-lg-2" href="#"
-            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
-          >
-        </ul>
-        <a class="link" href="#">See all contacts</a>
-      </section>
+      <h1 class="mt-5 mb-5 text-primary">Home</h1>
       <form action="#">
         <div class="mb-3 rounded">
           <label for="post" class="form-label text-white">Write new post</label>
@@ -72,28 +49,24 @@
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
       <section class="my-5">
-        <h2 class="text-white">Your posts</h2>
+        <h2 class="text-white">Recent posts</h2>
         <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
               <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
                 <strong class="d-block text-primary">@username</strong>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
-            </div>
-            <div class="d-flex justify-content-end">
-              <button class="btn btn-secondary">Edit</button>
-              <button class="btn btn-danger ms-2">Delete</button>
             </div>
           </div>
         </div>
         <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
               <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
@@ -101,16 +74,12 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
-          </div>
-          <div class="d-flex justify-content-end">
-            <button class="btn btn-secondary">Edit</button>
-            <button class="btn btn-danger ms-2">Delete</button>
           </div>
         </div>
         <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
               <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
@@ -118,16 +87,12 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
-          </div>
-          <div class="d-flex justify-content-end">
-            <button class="btn btn-secondary">Edit</button>
-            <button class="btn btn-danger ms-2">Delete</button>
           </div>
         </div>
         <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
               <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
@@ -135,16 +100,12 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
-          </div>
-          <div class="d-flex justify-content-end">
-            <button class="btn btn-secondary">Edit</button>
-            <button class="btn btn-danger ms-2">Delete</button>
           </div>
         </div>
         <div class="my-4 p-3 rounded shadow-sm">
           <div class="row pt-3">
             <div class="col">
-              <img class="rounded contact-image" src="/images/Joakim_fullstakk.jpg" alt="#" />
+              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
             </div>
             <div class="col-8 col-md-9 col-lg-10">
               <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
@@ -152,10 +113,6 @@
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
               </p>
             </div>
-          </div>
-          <div class="d-flex justify-content-end">
-            <button class="btn btn-secondary">Edit</button>
-            <button class="btn btn-danger ms-2">Delete</button>
           </div>
         </div>
       </section>

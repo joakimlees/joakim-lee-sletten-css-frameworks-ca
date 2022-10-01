@@ -4,118 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoMe | Home page</title>
+    <title>SoMe | Home</title>
     <meta name="description" content="Home page for SoMe | social media app" />
     <link rel="stylesheet" href="/dist/css/styles.css" />
+    <!--Link to remove fav icon error start-->
+    <link rel="icon" href="data:;base64,=" />
+    <!--Link to remove fav icon error end-->
   </head>
   <body class="bg-md-dark-gray">
-    <header class="bg-primary d-flex justify-content-center border-bottom border-white">
+    <header class="bg-primary d-flex justify-content-center">
       <a class="text-decoration-none text-dark" href="/index.html">SoMe</a>
     </header>
-    <nav class="navbar navbar-expand-md navbar-light bg-primary">
-      <div class="container">
-        <a class="navbar-brand" href="/index.html">SoMe</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav me-auto mb-2 mb-md-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/profile.html">Profile</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="/index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/login.html">Logout</a>
-            </li>
-          </ul>
-        </div>
+    <main class="mx-auto container-small text-center pt-5 mt-5 vh-100">
+      <h1 class="fw-light text-white">Welcome to SoMe</h1>
+      <p class="lead text-primary">Social Media Application project</p>
+      <div class="row px-2">
+        <div class="col"><a href="/profile/login/index.html" class="btn btn-primary my-2 d-flex justify-content-center">Login</a></div>
+        <div class="col"><a href="/profile/register/index.html" class="btn btn-secondary my-2 d-flex justify-content-center">Register account</a></div>
       </div>
-    </nav>
-    <main class="container">
-      <h1 class="mt-5 mb-5 text-primary">Home</h1>
-      <form action="#">
-        <div class="mb-3 rounded">
-          <label for="post" class="form-label text-white">Write new post</label>
-          <textarea class="post-field" id="post" rows="3" placeholder="Start writing your post here..." required></textarea>
-        </div>
-        <div>
-          <button type="submit" class="btn btn-primary">Publish post</button>
-        </div>
-      </form>
-      <form class="d-flex mt-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-primary" type="submit">Search</button>
-      </form>
-      <section class="my-5">
-        <h2 class="text-white">Recent posts</h2>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="py-5 bg-primary">
       <div class="container">
