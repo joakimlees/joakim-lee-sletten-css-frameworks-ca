@@ -9,8 +9,6 @@ export function registerFormListener() {
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
 
-    const method = form.method;
-
-    register(profile, method);
+    register(profile);
   });
 }
