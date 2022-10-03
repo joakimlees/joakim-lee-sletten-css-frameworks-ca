@@ -1,5 +1,6 @@
 import { registerFormListener } from "./handlers/register.mjs";
 import { loginFormListener } from "./handlers/login.mjs";
+import * as post from "./api/posts/index.mjs";
 
 const path = location.pathname;
 
@@ -13,3 +14,5 @@ switch (path) {
   default:
     console.log("Error - No form found");
 }
+
+post.getPost(314).then(console.log);
