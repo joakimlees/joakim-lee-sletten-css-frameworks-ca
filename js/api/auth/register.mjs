@@ -16,5 +16,6 @@ export async function register(profile) {
   });
 
   const result = await response.json();
-  console.log(result);
+  console.log("registration successful");
+  return result;
 }
