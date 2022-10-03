@@ -14,5 +14,3 @@ switch (path) {
   default:
     console.log("Error - No form found");
 }
-
-post.getPost(314).then(console.log);
