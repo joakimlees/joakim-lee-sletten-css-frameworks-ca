@@ -10,7 +10,8 @@ export function registerFormListener() {
       const formData = new FormData(form);
       const profile = Object.fromEntries(formData.entries());
 
-      register(profile);
+      console.log(profile);
+      //register(profile);
     });
   }
 }
