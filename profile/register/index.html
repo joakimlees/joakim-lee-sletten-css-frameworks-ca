@@ -10,34 +10,36 @@
     <!--Link to remove fav icon error start-->
     <link rel="icon" href="data:;base64,=" />
     <!--Link to remove fav icon error end-->
+    <script src="../../js/index.mjs" type="module" defer></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </head>
   <body class="bg-md-dark-gray">
     <header class="bg-primary d-flex justify-content-center">
-      <a class="text-decoration-none text-dark" href="../../index.html">SoMe</a>
+      <a class="text-decoration-none text-dark" href="../../">SoMe</a>
     </header>
     <main class="mx-auto px-4 container-small pt-5 vh-100">
       <div class="text-center text-primary">SoMe-logo</div>
       <h1 class="text-white text-center" id="login-heading">Create account</h1>
-      <form action="/index.html" class="form-container mx-auto" id="login-form">
+      <form class="form-container mx-auto" id="register-form">
         <div class="mt-5">
           <label for="username-login" class="form-label text-white">Username</label>
-          <input type="text" class="form-control" id="username-register" aria-describedby="username" required />
+          <input type="text" name="name" class="form-control" id="username-register" aria-describedby="username" minlength="2" maxlength="15" pattern="^[\w]+$" title="Username must must only contain letters, numbers and underscore (_) & must be between 2 and 15 characters. Example: MyName_123" required />
         </div>
         <div class="mt-2">
           <label for="email-login" class="form-label text-white">Email address</label>
-          <input type="email" class="form-control" id="email-register" aria-describedby="email-address" required />
+          <input type="email" name="email" class="form-control" id="email-register" aria-describedby="email-address" pattern="^[\w\-.]+@(stud.)?noroff.no$" title="Only users with a (stud.)noroff.no email-address are allowed to register" required />
         </div>
         <div class="mb-3 mt-2">
-          <label for="exampleInputPassword1" class="form-label text-white">Password</label>
-          <input type="password" class="form-control" id="password-register" required />
+          <label for="password-register" class="form-label text-white">Password</label>
+          <input type="password" name="password" class="form-control" id="password-register" required minlength="8" />
         </div>
         <div class="d-grid mx-auto">
-          <button type="submit" class="btn btn-primary" id="create-account-btn">Create Account</button>
+          <button class="btn btn-primary" id="create-account-btn">Create Account</button>
         </div>
       </form>
       <div class="d-grid mx-auto mt-4 form-container">
         <h2 class="text-center text-white mb-0 h5" id="create-account-heading">Already have an account?</h2>
-        <a class="btn btn-secondary" href="../login/index.html">Go to login</a>
+        <a class="btn btn-secondary" href="../login/">Go to login</a>
       </div>
     </main>
     <footer class="py-5 bg-primary">
@@ -45,7 +47,5 @@
         <a class="text-decoration-none text-dark" href="#">SoMe - Contact</a>
       </div>
     </footer>
-    <script src="/js/script.mjs" type="module"></script>
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
