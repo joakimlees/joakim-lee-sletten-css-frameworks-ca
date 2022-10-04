@@ -7,8 +7,11 @@
     <title>SoMe | Posts</title>
     <meta name="description" content="Home page for SoMe | social media app" />
     <link rel="stylesheet" href="/dist/css/styles.css" />
+    <!--Link to remove fav icon error start-->
+    <link rel="icon" href="data:;base64,=" />
+    <!--Link to remove fav icon error end-->
     <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src=""></script>
+    <script src="../js/index.mjs" type="module"></script>
   </head>
   <body class="bg-md-dark-gray">
     <header class="bg-primary d-flex justify-content-center border-bottom border-white">
@@ -50,74 +53,7 @@
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
         <button class="btn btn-primary" type="submit">Search</button>
       </form>
-      <section class="my-5">
-        <h2 class="text-white">Recent posts</h2>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="my-5" id="posts-container"></section>
     </main>
     <footer class="py-5 bg-primary">
       <div class="container">
