@@ -44,7 +44,7 @@ export function postTemplate(postData) {
   if (postData.author.avatar === "" || postData.author.avatar === null || postData.author.avatar === undefined) {
     postAvatar.src = "../../../images/some-default-avatar.jpg";
   }
-  if (postData.author.name !== profile.name) {
+  if (postData.author.email !== profile.email) {
     editButton.classList.add("d-none");
   }
 

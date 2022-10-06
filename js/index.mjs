@@ -2,7 +2,7 @@ import { registerFormListener } from "./handlers/register.mjs";
 import { loginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
-import { load } from "./storage/index.mjs";
+import { createPostListener } from "./handlers/createPost.mjs";
 
 const path = location.pathname;
 
@@ -12,6 +12,9 @@ switch (path) {
     break;
   case "/profile/register/":
     registerFormListener();
+    break;
+  case "/posts/":
+    createPostListener();
     break;
 }
 
