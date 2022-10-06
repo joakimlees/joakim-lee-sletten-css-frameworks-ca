@@ -1,12 +1,8 @@
 import { load } from "../storage/index.mjs";
 
-console.log(load("profile"));
-
 const profile = load("profile");
 
-console.log(profile.name);
-
-export function postTemplate(postData, matchProfile) {
+export function postTemplate(postData) {
   const postContainer = document.createElement("div");
   const postWrapper = document.createElement("div");
   const postAvatarContainer = document.createElement("div");
@@ -48,7 +44,7 @@ export function postTemplate(postData, matchProfile) {
   if (postData.author.avatar === "" || postData.author.avatar === null || postData.author.avatar === undefined) {
     postAvatar.src = "../../../images/some-default-avatar.jpg";
   }
-  if (postData.author.name !== matchProfile) {
+  if (postData.author.name !== profile.name) {
     editButton.classList.add("d-none");
   }
 

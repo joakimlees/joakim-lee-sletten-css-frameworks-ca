@@ -2,6 +2,7 @@ import { registerFormListener } from "./handlers/register.mjs";
 import { loginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
+import { load } from "./storage/index.mjs";
 
 const path = location.pathname;
 
