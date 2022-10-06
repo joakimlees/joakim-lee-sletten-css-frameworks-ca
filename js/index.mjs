@@ -21,7 +21,7 @@ switch (path) {
 // postMethods.getPosts().then(console.log);
 
 // Single post
-
+/*
 async function testTemplate() {
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
@@ -34,7 +34,7 @@ async function testTemplate() {
   templates.renderPost(post, container);
 }
 testTemplate();
-/*
+*/
 // list of posts
 
 async function testTemplate() {
@@ -45,4 +45,3 @@ async function testTemplate() {
 }
 
 testTemplate();
-*/
