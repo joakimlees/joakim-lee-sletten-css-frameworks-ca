@@ -21,18 +21,20 @@ switch (path) {
 // postMethods.getPosts().then(console.log);
 
 // Single post
-/*
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
 
-  const post = posts[34];
-  const container = document.querySelector("#posts-container");
+async function testTemplate() {
+  const url = new URL(location.href);
+  const id = url.searchParams.get("id");
+
+  const posts = await postMethods.getPost(id);
+
+  const post = posts;
+  const container = document.querySelector("#post-container");
 
   templates.renderPost(post, container);
 }
 testTemplate();
-*/
-
+/*
 // list of posts
 
 async function testTemplate() {
@@ -43,3 +45,4 @@ async function testTemplate() {
 }
 
 testTemplate();
+*/
