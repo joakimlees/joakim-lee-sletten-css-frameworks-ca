@@ -14,6 +14,8 @@ switch (path) {
     break;
 }
 
+// postMethods.getPosts().then(console.log);
+
 // Single post
 /*
 async function testTemplate() {
@@ -28,7 +30,7 @@ testTemplate();
 */
 
 // list of posts
-/*
+
 async function testTemplate() {
   const posts = await postMethods.getPosts();
   const container = document.querySelector("#posts-container");
@@ -37,4 +39,3 @@ async function testTemplate() {
 }
 
 testTemplate();
-*/
