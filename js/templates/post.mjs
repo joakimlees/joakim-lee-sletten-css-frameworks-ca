@@ -41,6 +41,12 @@ export function postTemplate(postData) {
   editButton.innerText = "Edit post";
   postAvatar.src = postData.author.avatar;
 
+  if (editButton) {
+    editButton.addEventListener("click", () => {
+      document.location.href = `/post/edit/?id=${postData.id}`;
+    });
+  }
+
   if (postData.author.avatar === "" || postData.author.avatar === null || postData.author.avatar === undefined) {
     postAvatar.src = "../../../images/some-default-avatar.jpg";
   }
