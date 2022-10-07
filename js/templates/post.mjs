@@ -48,7 +48,7 @@ export function postTemplate(postData) {
   }
 
   viewButton.addEventListener("click", () => {
-    document.location.href = `/post/?id=${postData.id}`;
+    document.location.href = `/post/?id=${postData.id}?_author=true`;
   });
 
   if (postData.author.avatar === "" || postData.author.avatar === null || postData.author.avatar === undefined) {
@@ -61,16 +61,18 @@ export function postTemplate(postData) {
   return postContainer;
 }
 
-export function singlePostTemplate(postData) {
-  console.log(postData);
+/*export function singlePostTemplate(postData) {
+  return postData;
+}*/
+
+export function findPostId(postData) {
+  const id = postData.id;
+
+  console.log(id);
 }
 
 export function renderPost(postData, parent) {
-  parent.append(singlePostTemplate(postData));
-}
-
-export function renderPosts(postDataList, parent) {
-  parent.append(...postDataList.map(postTemplate));
+  parent.append(postTemplate(postData));
 }
 
 // html structure
