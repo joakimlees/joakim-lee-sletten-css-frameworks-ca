@@ -5,23 +5,21 @@ import * as templates from "./templates/index.mjs";
 import { createPostListener } from "./handlers/createPost.mjs";
 
 // list of posts
-/*
+
 async function testPostsTemplate() {
   const posts = await postMethods.getPosts();
   const container = document.querySelector("#posts-container");
 
   templates.renderPosts(posts, container);
 }
-*/
+
 // Single post
 
 async function testPostTemplate() {
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
 
-  const newId = id.slice(0, -13);
-
-  const post = await postMethods.getPost(newId);
+  const post = await postMethods.getPost(id);
 
   const container = document.querySelector("#post-container");
 
@@ -30,7 +28,6 @@ async function testPostTemplate() {
 
 testPostTemplate();
 
-/*
 const path = location.pathname;
 
 switch (path) {
@@ -45,7 +42,7 @@ switch (path) {
     testPostsTemplate();
     break;
 }
-*/
+
 // postMethods.getPosts().then(console.log);
 
 // Single post

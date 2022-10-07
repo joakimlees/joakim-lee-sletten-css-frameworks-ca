@@ -65,12 +65,6 @@ export function postTemplate(postData) {
   return postData;
 }*/
 
-export function findPostId(postData) {
-  const id = postData.id;
-
-  console.log(id);
-}
-
 export function renderPost(postData, parent) {
   parent.append(postTemplate(postData));
 }
