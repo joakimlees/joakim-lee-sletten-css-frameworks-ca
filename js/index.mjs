@@ -3,9 +3,11 @@ import { loginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
 import { createPostListener } from "./handlers/createPost.mjs";
-import { updatePost } from "./api/posts/index.mjs";
+import { getPosts, updatePost } from "./api/posts/index.mjs";
 import { updatePostListener } from "./handlers/updatePost.mjs";
+import { load } from "./storage/index.mjs";
 
+const profile = load("profile");
 // list of posts
 
 async function testPostsTemplate() {
@@ -50,6 +52,20 @@ switch (path) {
     updatePostListener();
     break;
 }
+
+function testProfile() {
+  const returnResult = postMethods.getPosts();
+
+  returnResult.then((data) => {
+    for (const myKey in data) {
+      if (data[myKey].author.email === profile.email) {
+        console.log(data[myKey]);
+      }
+    }
+  });
+}
+
+testProfile();
 
 // postMethods.getPosts().then(console.log);
 

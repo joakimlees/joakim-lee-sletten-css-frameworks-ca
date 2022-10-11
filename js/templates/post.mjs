@@ -2,7 +2,7 @@ import { load } from "../storage/index.mjs";
 
 const profile = load("profile");
 
-export function postTemplate(postData) {
+function postTemplate(postData) {
   const postContainer = document.createElement("div");
   const postWrapper = document.createElement("div");
   const postAvatarContainer = document.createElement("div");
