@@ -3,6 +3,8 @@ import { loginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
 import { createPostListener } from "./handlers/createPost.mjs";
+import { updatePost } from "./api/posts/index.mjs";
+import { updatePostListener } from "./handlers/updatePost.mjs";
 
 // list of posts
 
@@ -40,6 +42,9 @@ switch (path) {
   case "/posts/":
     createPostListener();
     testPostsTemplate();
+    break;
+  case "post/edit":
+    updatePostListener();
     break;
 }
 
