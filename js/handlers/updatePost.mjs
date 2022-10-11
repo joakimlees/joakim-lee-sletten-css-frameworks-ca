@@ -14,6 +14,8 @@ export function updatePostListener() {
       const post = Object.fromEntries(formData.entries());
       post.id = id;
 
+      console.log("updated");
+      document.location.href = `/post/?id=${id}`;
       updatePost(post);
     });
   }

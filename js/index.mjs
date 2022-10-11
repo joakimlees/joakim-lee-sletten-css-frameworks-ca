@@ -46,7 +46,7 @@ switch (path) {
   case "/post/":
     testPostTemplate();
     break;
-  case "/post/edit":
+  case "/post/edit/":
     updatePostListener();
     break;
 }
