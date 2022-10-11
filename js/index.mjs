@@ -2,6 +2,33 @@ import { registerFormListener } from "./handlers/register.mjs";
 import { loginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
+import { createPostListener } from "./handlers/createPost.mjs";
+import { updatePost } from "./api/posts/index.mjs";
+import { updatePostListener } from "./handlers/updatePost.mjs";
+
+// list of posts
+
+async function testPostsTemplate() {
+  const posts = await postMethods.getPosts();
+  const container = document.querySelector("#posts-container");
+
+  templates.renderPosts(posts, container);
+}
+
+// Single post
+
+async function testPostTemplate() {
+  const url = new URL(location.href);
+  const id = url.searchParams.get("id");
+
+  const post = await postMethods.getPost(id);
+
+  const container = document.querySelector("#post-container");
+
+  templates.renderPost(post, container);
+}
+
+testPostTemplate();
 
 const path = location.pathname;
 
@@ -12,29 +39,29 @@ switch (path) {
   case "/profile/register/":
     registerFormListener();
     break;
+  case "/posts/":
+    createPostListener();
+    testPostsTemplate();
+    break;
+  case "post/edit":
+    updatePostListener();
+    break;
 }
+
+// postMethods.getPosts().then(console.log);
 
 // Single post
 /*
 async function testTemplate() {
-  const posts = await postMethods.getPosts();
+  const url = new URL(location.href);
+  const id = url.searchParams.get("id");
 
-  const post = posts[34];
-  const container = document.querySelector("#posts-container");
+  const posts = await postMethods.getPost(id);
+
+  const post = posts;
+  const container = document.querySelector("#post-container");
 
   templates.renderPost(post, container);
 }
-testTemplate();
-*/
-
-// list of posts
-/*
-async function testTemplate() {
-  const posts = await postMethods.getPosts();
-  const container = document.querySelector("#posts-container");
-
-  templates.renderPosts(posts, container);
-}
-
 testTemplate();
 */

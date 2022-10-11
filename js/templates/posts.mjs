@@ -11,16 +11,7 @@ export function postTemplate(postData) {
   const postContent = document.createElement("p");
   const postUsername = document.createElement("strong");
   const buttonWrapper = document.createElement("div");
-
-  if (location.pathname === "/posts/") {
-    const viewButton = document.createElement("button");
-    viewButton.classList.add("btn", "btn-secondary");
-    buttonWrapper.appendChild(viewButton);
-    viewButton.innerText = "View post";
-    viewButton.addEventListener("click", () => {
-      document.location.href = `/post/?id=${postData.id}?_author=true`;
-    });
-  }
+  const viewButton = document.createElement("button");
   const editButton = document.createElement("button");
 
   postContainer.classList.add("container", "my-4", "p-3", "rounded", "shadow-sm");
@@ -31,6 +22,7 @@ export function postTemplate(postData) {
   postUsername.classList.add("d-block", "text-primary");
   postContent.classList.add("pb-5", "lh-sm", "border-bottom", "border-md-light-gray", "text-white");
   buttonWrapper.classList.add("d-flex", "justify-content-end");
+  viewButton.classList.add("btn", "btn-secondary");
   editButton.classList.add("btn", "btn-danger", "ms-2");
 
   postContainer.appendChild(postWrapper);
@@ -40,10 +32,12 @@ export function postTemplate(postData) {
   postContentWrapper.appendChild(postContent);
   postContent.appendChild(postUsername);
   postContainer.appendChild(buttonWrapper);
+  buttonWrapper.appendChild(viewButton);
   buttonWrapper.appendChild(editButton);
 
   postUsername.innerText = "@" + postData.author.name;
   postContent.innerHTML = postContent.innerHTML + postData.body;
+  viewButton.innerText = "View post";
   editButton.innerText = "Edit post";
   postAvatar.src = postData.author.avatar;
 
@@ -52,6 +46,10 @@ export function postTemplate(postData) {
       document.location.href = `/post/edit/?id=${postData.id}`;
     });
   }
+
+  viewButton.addEventListener("click", () => {
+    document.location.href = `/post/?id=${postData.id}`;
+  });
 
   if (postData.author.avatar === "" || postData.author.avatar === null || postData.author.avatar === undefined) {
     postAvatar.src = "../../../images/some-default-avatar.jpg";
@@ -63,12 +61,8 @@ export function postTemplate(postData) {
   return postContainer;
 }
 
-/*export function singlePostTemplate(postData) {
-  return postData;
-}*/
-
-export function renderPost(postData, parent) {
-  parent.append(postTemplate(postData));
+export function renderPosts(postDataList, parent) {
+  parent.append(...postDataList.map(postTemplate));
 }
 
 // html structure

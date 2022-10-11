@@ -3,6 +3,7 @@ import { authFetch } from "../authFetch.mjs";
 
 const action = "/posts";
 const method = "put";
+const authorURL = "?_author=true";
 
 export async function updatePost(postData) {
   if (!postData.id) {

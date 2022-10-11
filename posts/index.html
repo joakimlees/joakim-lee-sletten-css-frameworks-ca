@@ -19,7 +19,7 @@
     </header>
     <nav class="navbar navbar-expand-md navbar-light bg-primary">
       <div class="container">
-        <a class="navbar-brand" href="/index.html">SoMe</a>
+        <a class="navbar-brand" href="/">SoMe</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,7 +29,7 @@
               <a class="nav-link" aria-current="page" href="../profile/">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="../feed/">Home</a>
+              <a class="nav-link active" href="../posts/">Posts</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="../profile/login/">Logout</a>
@@ -40,13 +40,15 @@
     </nav>
     <main class="container">
       <h1 class="mt-5 mb-5 text-primary">Home</h1>
-      <form action="#">
+      <form id="create-post-form">
         <div class="mb-3 rounded">
-          <label for="post" class="form-label text-white">Write new post</label>
-          <textarea class="post-field" id="post" rows="3" placeholder="Start writing your post here..." required></textarea>
+          <label for="title" class="form-label text-white">Give your post a title</label>
+          <input type="text" class="form-control" name="title" placeholder="Write your title here..." required />
+          <label for="post" class="form-label text-white mt-2">What do you want to share?</label>
+          <textarea name="body" class="post-field" id="post" rows="3" placeholder="Start writing your post here..." maxlength="150" required></textarea>
         </div>
         <div>
-          <button type="submit" class="btn btn-primary">Publish post</button>
+          <button class="btn btn-primary">Publish post</button>
         </div>
       </form>
       <form class="d-flex mt-5" role="search">
