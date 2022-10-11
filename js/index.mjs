@@ -28,9 +28,9 @@ async function testPostTemplate() {
   templates.renderPost(post, container);
 }
 
-testPostTemplate();
-
 const path = location.pathname;
+
+console.log("this " + path);
 
 switch (path) {
   case "/profile/login/":
@@ -43,7 +43,10 @@ switch (path) {
     createPostListener();
     testPostsTemplate();
     break;
-  case "post/edit":
+  case "/post/":
+    testPostTemplate();
+    break;
+  case "/post/edit":
     updatePostListener();
     break;
 }
