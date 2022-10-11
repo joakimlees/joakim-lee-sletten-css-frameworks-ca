@@ -30,6 +30,31 @@ async function testPostTemplate() {
   templates.renderPost(post, container);
 }
 
+//profile posts
+
+async function testProfile() {
+  const allPosts = await postMethods.getPosts();
+
+  const container = document.querySelector("#profile-posts-container");
+
+  const profilePosts = allPosts.filter((post) => {
+    if (post.author.email === profile.email) {
+      return true;
+    }
+  });
+  console.log(profilePosts);
+}
+/*
+  returnResult.then((data) => {
+    for (const myKey in data) {
+      if (data[myKey].author.email === profile.email) {
+        const profilePosts = data;
+        console.log(profilePosts);
+      }
+    }
+  });
+  */
+
 const path = location.pathname;
 
 console.log("this " + path);
@@ -51,21 +76,9 @@ switch (path) {
   case "/post/edit/":
     updatePostListener();
     break;
+  case "/profile/":
+    testProfile();
 }
-
-function testProfile() {
-  const returnResult = postMethods.getPosts();
-
-  returnResult.then((data) => {
-    for (const myKey in data) {
-      if (data[myKey].author.email === profile.email) {
-        console.log(data[myKey]);
-      }
-    }
-  });
-}
-
-testProfile();
 
 // postMethods.getPosts().then(console.log);
 
