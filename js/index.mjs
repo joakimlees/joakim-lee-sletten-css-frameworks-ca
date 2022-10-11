@@ -42,7 +42,7 @@ async function testProfile() {
       return true;
     }
   });
-  console.log(profilePosts);
+  templates.renderPosts(profilePosts, container);
 }
 /*
   returnResult.then((data) => {
