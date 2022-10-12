@@ -37,13 +37,22 @@ async function testProfile() {
 
   const container = document.querySelector("#profile-posts-container");
 
-  const profilePosts = allPosts.filter((post) => {
-    if (post.author.email === profile.email) {
+  const profileEmail = allPosts.filter(({ author: { email } }) => {
+    return email === profile.email;
+  });
+
+  console.log(profileEmail);
+
+  /*
+  const profilePosts = allPosts.filter(({ author }) => {
+    if (author.email === profile.email) {
       return true;
     }
   });
-  templates.renderPosts(profilePosts, container);
+  console.log(profilePosts);
+  templates.renderPosts(profilePosts, container);*/
 }
+
 /*
   returnResult.then((data) => {
     for (const myKey in data) {
