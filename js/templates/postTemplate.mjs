@@ -1,17 +1,21 @@
+import { postHtml } from "./postHtml.mjs";
 import { load } from "../storage/index.mjs";
 
 const profile = load("profile");
 
-function postTemplate(postData) {
-  const postContainer = document.createElement("div");
-  const postWrapper = document.createElement("div");
-  const postAvatarContainer = document.createElement("div");
-  const postAvatar = document.createElement("img");
-  const postContentWrapper = document.createElement("div");
-  const postContent = document.createElement("p");
-  const postUsername = document.createElement("strong");
-  const buttonWrapper = document.createElement("div");
+export function testTemplate() {
+  const image = postHtml.getElementById("post-image");
+  const username = postHtml.getElementById("username");
+  const postCopy = postHtml.getElementById("post-copy");
+  const buttonWrapper = postHtml.getElementById("button-wrapper");
+  const buttonPrimary = postHtml.getElementById("btn-primary");
+  const buttonSecondary = postHtml.getElementById("btn-secondary");
 
+  console.log(image);
+}
+
+/*
+function postTemplate(postData) {
   if (location.pathname === "/posts/") {
     const viewButton = document.createElement("button");
     viewButton.classList.add("btn", "btn-secondary");
@@ -63,36 +67,12 @@ function postTemplate(postData) {
   return postContainer;
 }
 
-/*export function singlePostTemplate(postData) {
+export function singlePostTemplate(postData) {
   return postData;
-}*/
+}
 
 export function renderPost(postData, parent) {
   parent.append(postTemplate(postData));
 }
 
-// html structure
-/*
-  <h2 class="text-white">Recent posts</h2>
-
-        <div class="my-4 p-3 rounded shadow-sm">
-          <div class="row pt-3">
-            <div class="col">
-              <img class="rounded contact-image" src="/images/Hege_fullstakk.jpg" alt="#" />
-            </div>
-            <div class="col-8 col-md-9 col-lg-10">
-              <p class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
-                <strong class="d-block text-primary">@username</strong>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-
-                    <div class="d-flex justify-content-end">
-              <button class="btn btn-secondary">View</button>
-              <button class="btn btn-danger ms-2">Edit</button>
-            </div>
 */

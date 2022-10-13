@@ -3,9 +3,13 @@ import { loginFormListener } from "./handlers/login.mjs";
 import * as postMethods from "./api/posts/index.mjs";
 import * as templates from "./templates/index.mjs";
 import { createPostListener } from "./handlers/createPost.mjs";
-import { updatePost } from "./api/posts/index.mjs";
+import { getPosts, updatePost } from "./api/posts/index.mjs";
 import { updatePostListener } from "./handlers/updatePost.mjs";
+import { load } from "./storage/index.mjs";
 
+templates.testTemplate();
+
+const profile = load("profile");
 // list of posts
 
 async function testPostsTemplate() {
@@ -28,9 +32,23 @@ async function testPostTemplate() {
   templates.renderPost(post, container);
 }
 
-testPostTemplate();
+//profile posts
+
+async function testProfile() {
+  const allPosts = await postMethods.getPosts();
+
+  const container = document.querySelector("#profile-posts-container");
+
+  const profileEmail = allPosts.filter(({ author: { email } }) => {
+    return email === profile.email;
+  });
+
+  templates.renderPosts(profileEmail, container);
+}
 
 const path = location.pathname;
+
+console.log("this " + path);
 
 switch (path) {
   case "/profile/login/":
@@ -43,9 +61,14 @@ switch (path) {
     createPostListener();
     testPostsTemplate();
     break;
-  case "post/edit":
+  case "/post/":
+    testPostTemplate();
+    break;
+  case "/post/edit/":
     updatePostListener();
     break;
+  case "/profile/":
+    testProfile();
 }
 
 // postMethods.getPosts().then(console.log);
