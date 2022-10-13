@@ -9,14 +9,15 @@ export function createPostHtml() {
           <img id="post-image" class="rounded contact-image" src="" alt="" />
         </div>
         <div class="col-8 col-md-9 col-lg-10">
+          <h2 id="post-title"></h2>
           <p id="post-copy" class="pb-5 lh-sm border-bottom border-md-light-gray text-white">
             <strong id="username" class="d-block text-primary"></strong>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quia quis vel temporibus magnam at! Minus quisquam voluptates suscipit quasi cupiditate fuga dolorum consectetur! Laudantium, necessitatibus. Reiciendis commodi aliquam nesciunt.
           </p>
         </div>
         <div class="button-wrapper d-flex justify-content-end">
-          <button id="btn-primary" class="btn btn-secondary">View</button>
-          <button id="btn-secondary" class="btn btn-danger ms-2">Edit</button>
+          <button id="btn-primary" class="btn btn-secondary">View post</button>
+          <button id="btn-secondary" class="btn btn-danger ms-2">Edit post</button>
         </div>
       </div>
     </div>`,

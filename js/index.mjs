@@ -7,8 +7,6 @@ import { getPosts, updatePost } from "./api/posts/index.mjs";
 import { updatePostListener } from "./handlers/updatePost.mjs";
 import { load } from "./storage/index.mjs";
 
-templates.testTemplate();
-
 const profile = load("profile");
 // list of posts
 

@@ -60,11 +60,11 @@ function postTemplate(postData) {
 
   return postContainer;
 }
-
+/*
 export function renderPosts(postDataList, parent) {
   parent.append(...postDataList.map(postTemplate));
 }
-
+*/
 // html structure
 /*
   <h2 class="text-white">Recent posts</h2>
