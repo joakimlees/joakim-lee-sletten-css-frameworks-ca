@@ -7,6 +7,8 @@ import { getPosts, updatePost } from "./api/posts/index.mjs";
 import { updatePostListener } from "./handlers/updatePost.mjs";
 import { load } from "./storage/index.mjs";
 
+templates.testTemplate();
+
 const profile = load("profile");
 // list of posts
 
@@ -41,28 +43,8 @@ async function testProfile() {
     return email === profile.email;
   });
 
-  console.log(profileEmail);
-
-  /*
-  const profilePosts = allPosts.filter(({ author }) => {
-    if (author.email === profile.email) {
-      return true;
-    }
-  });
-  console.log(profilePosts);
-  templates.renderPosts(profilePosts, container);*/
+  templates.renderPosts(profileEmail, container);
 }
-
-/*
-  returnResult.then((data) => {
-    for (const myKey in data) {
-      if (data[myKey].author.email === profile.email) {
-        const profilePosts = data;
-        console.log(profilePosts);
-      }
-    }
-  });
-  */
 
 const path = location.pathname;
 
