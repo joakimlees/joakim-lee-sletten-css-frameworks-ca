@@ -20,10 +20,13 @@ async function testPostsTemplate() {
 async function testPostTemplate() {
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
-
   const post = await postMethods.getPost(id);
 
   const container = document.querySelector("#post-container");
+
+  if (!container) {
+    throw new Error("I believe this is what you have been looking for?")
+  }
 
   templates.renderPost(post, container);
 }
