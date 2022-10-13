@@ -6,15 +6,18 @@ export function updatePostListener() {
   const url = new URL(location.href);
   const id = url.searchParams.get("id");
 
+  console.log(form);
+
   if (form) {
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
       event.preventDefault();
       const form = event.target;
       const formData = new FormData(form);
       const post = Object.fromEntries(formData.entries());
       post.id = id;
 
-      updatePost(post);
+      await updatePost(post);
+      location.href = "/posts/?id=" + id;
     });
   }
 }
