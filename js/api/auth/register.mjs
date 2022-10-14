@@ -1,5 +1,5 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
-import * as ux from "../../components/index.mjs";
+import * as ux from "../../components/ui/index.mjs";
 
 const action = "/auth/register";
 const method = "post";
