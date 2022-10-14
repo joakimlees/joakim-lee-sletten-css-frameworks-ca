@@ -2,44 +2,65 @@ import { load } from "../storage/index.mjs";
 
 const profile = load("profile");
 
-function postTemplate(postData) {
-  const postContainer = document.createElement("div");
+function postsTemplate(postData) {
+  const postsContainer = document.createElement("div");
   const postWrapper = document.createElement("div");
   const postAvatarContainer = document.createElement("div");
   const postAvatar = document.createElement("img");
   const postContentWrapper = document.createElement("div");
+  const username = document.createElement("div");
   const postContent = document.createElement("p");
-  const postUsername = document.createElement("strong");
+  const postTitle = document.createElement("h3");
+  const bottomContentWrapper = document.createElement("div");
+  const dateWrapper = document.createElement("div");
+  const dateCreated = document.createElement("div");
+  const dateUpdated = document.createElement("div");
   const buttonWrapper = document.createElement("div");
   const viewButton = document.createElement("button");
   const editButton = document.createElement("button");
 
-  postContainer.classList.add("container", "my-4", "p-3", "rounded", "shadow-sm");
+  const postCreated = postData.created.slice(0, 10);
+  const postUpdated = postData.updated.slice(0, 10);
+
+  postsContainer.classList.add("container", "my-4", "p-3", "rounded", "shadow-sm");
   postWrapper.classList.add("wrapper", "row", "pt-3");
   postAvatarContainer.classList.add("avatarContainer", "col");
   postAvatar.classList.add("rounded", "contact-image");
   postContentWrapper.classList.add("contentWrapper", "col-8", "col-md-9", "col-lg-10");
-  postUsername.classList.add("d-block", "text-primary");
-  postContent.classList.add("pb-5", "lh-sm", "border-bottom", "border-md-light-gray", "text-white");
-  buttonWrapper.classList.add("d-flex", "justify-content-end");
+  username.classList.add("text-secondary");
+  postTitle.classList.add("d-block", "text-primary", "fs-6");
+  postContent.classList.add("pb-3", "lh-sm", "text-white");
+  bottomContentWrapper.classList.add("row", "border-top", "border-md-light-gray", "pt-3");
+  dateWrapper.classList.add("col", "d-flex", "justify-content-end", "mb-2");
+  dateCreated.classList.add("fs-6", "text-center", "text-white");
+  dateUpdated.classList.add("fs-6", "ms-4", "text-center", "text-white");
+  buttonWrapper.classList.add("col", "d-flex", "justify-content-end", "mb-2");
   viewButton.classList.add("btn", "btn-secondary");
-  editButton.classList.add("btn", "btn-danger", "ms-2");
+  editButton.classList.add("btn", "btn-danger", "ms-4");
 
-  postContainer.appendChild(postWrapper);
+  postsContainer.appendChild(postWrapper);
   postWrapper.appendChild(postAvatarContainer);
   postWrapper.appendChild(postContentWrapper);
   postAvatarContainer.appendChild(postAvatar);
+  postContentWrapper.appendChild(username);
   postContentWrapper.appendChild(postContent);
-  postContent.appendChild(postUsername);
-  postContainer.appendChild(buttonWrapper);
+  postContent.appendChild(postTitle);
+  postsContainer.appendChild(bottomContentWrapper);
+  bottomContentWrapper.appendChild(dateWrapper);
+  bottomContentWrapper.appendChild(buttonWrapper);
+  dateWrapper.appendChild(dateCreated);
+  dateWrapper.appendChild(dateUpdated);
   buttonWrapper.appendChild(viewButton);
   buttonWrapper.appendChild(editButton);
 
-  postUsername.innerText = "@" + postData.author.name;
+  username.innerText = "@" + postData.author.name;
+  postTitle.innerText = postData.title;
   postContent.innerHTML = postContent.innerHTML + postData.body;
   viewButton.innerText = "View post";
   editButton.innerText = "Edit post";
   postAvatar.src = postData.author.avatar;
+  dateCreated.innerText = "created: " + postCreated;
+  dateUpdated.innerText = "updated: " + postUpdated;
 
   if (editButton) {
     editButton.addEventListener("click", () => {
@@ -58,13 +79,13 @@ function postTemplate(postData) {
     editButton.classList.add("d-none");
   }
 
-  return postContainer;
+  return postsContainer;
 }
-/*
+
 export function renderPosts(postDataList, parent) {
-  parent.append(...postDataList.map(postTemplate));
+  parent.append(...postDataList.map(postsTemplate));
 }
-*/
+
 // html structure
 /*
   <h2 class="text-white">Recent posts</h2>
