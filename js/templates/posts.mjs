@@ -16,8 +16,8 @@ function postsTemplate(postData) {
   const dateCreated = document.createElement("div");
   const dateUpdated = document.createElement("div");
   const buttonWrapper = document.createElement("div");
-  const viewButton = document.createElement("button");
-  const editButton = document.createElement("button");
+  const primaryButton = document.createElement("button");
+  const secondaryButton = document.createElement("button");
 
   const postCreated = postData.created.slice(0, 10);
   const postUpdated = postData.updated.slice(0, 10);
@@ -35,8 +35,8 @@ function postsTemplate(postData) {
   dateCreated.classList.add("fs-6", "text-center", "text-white");
   dateUpdated.classList.add("fs-6", "ms-4", "text-center", "text-white");
   buttonWrapper.classList.add("col", "d-flex", "justify-content-end", "mb-2");
-  viewButton.classList.add("btn", "btn-secondary");
-  editButton.classList.add("btn", "btn-danger", "ms-4");
+  primaryButton.classList.add("btn", "btn-secondary");
+  secondaryButton.classList.add("btn", "btn-danger", "ms-4");
 
   postsContainer.appendChild(postWrapper);
   postWrapper.appendChild(postAvatarContainer);
@@ -50,40 +50,56 @@ function postsTemplate(postData) {
   bottomContentWrapper.appendChild(buttonWrapper);
   dateWrapper.appendChild(dateCreated);
   dateWrapper.appendChild(dateUpdated);
-  buttonWrapper.appendChild(viewButton);
-  buttonWrapper.appendChild(editButton);
+  buttonWrapper.appendChild(primaryButton);
+  buttonWrapper.appendChild(secondaryButton);
 
   username.innerText = "@" + postData.author.name;
   postTitle.innerText = postData.title;
   postContent.innerHTML = postContent.innerHTML + postData.body;
-  viewButton.innerText = "View post";
-  editButton.innerText = "Edit post";
-  postAvatar.src = postData.author.avatar;
-  dateCreated.innerText = "created: " + postCreated;
-  dateUpdated.innerText = "updated: " + postUpdated;
+  primaryButton.innerText = "View post";
+  secondaryButton.innerText = "Edit post";
 
-  if (editButton) {
-    editButton.addEventListener("click", () => {
-      document.location.href = `/post/edit/?id=${postData.id}`;
-    });
+  // Check if the post belong to the user, if not hide the edit button
+  if (postData.author.email !== profile.email) {
+    secondaryButton.classList.add("d-none");
   }
 
-  viewButton.addEventListener("click", () => {
+  if (location.pathname === "/post/") {
+    primaryButton.classList.add("d-none");
+  } else if (location.pathname === "/post/" && postData.author.email !== profile.email) {
+    primaryButton.classList.add("d-none");
+    secondaryButton.classList.add("d-none");
+  }
+
+  primaryButton.addEventListener("click", () => {
     document.location.href = `/post/?id=${postData.id}`;
   });
 
-  if (postData.author.avatar === "" || postData.author.avatar === null || postData.author.avatar === undefined) {
-    postAvatar.src = "../../../images/some-default-avatar.jpg";
+  secondaryButton.addEventListener("click", () => {
+    document.location.href = `/post/edit/?id=${postData.id}`;
+  });
+
+  // Check if user got an avatar, if not, set a default image
+  switch (postData.author.avatar) {
+    case null || undefined || "":
+      postAvatar.src = "../../../images/some-default-avatar.jpg";
+      break;
+    default:
+      postAvatar.src = postData.author.avatar;
   }
-  if (postData.author.email !== profile.email) {
-    editButton.classList.add("d-none");
-  }
+
+  dateCreated.innerText = "created: " + postCreated;
+  dateUpdated.innerText = "updated: " + postUpdated;
 
   return postsContainer;
 }
 
 export function renderPosts(postDataList, parent) {
   parent.append(...postDataList.map(postsTemplate));
+}
+
+export function renderPost(postData, parent) {
+  parent.append(postsTemplate(postData));
 }
 
 // html structure

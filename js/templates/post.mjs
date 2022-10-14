@@ -1,4 +1,4 @@
-import { load } from "../storage/index.mjs";
+/*import { load } from "../storage/index.mjs";
 
 const profile = load("profile");
 
@@ -63,13 +63,14 @@ function postTemplate(postData) {
   return postContainer;
 }
 
-/*export function singlePostTemplate(postData) {
+export function singlePostTemplate(postData) {
   return postData;
-}*/
+}
 
 export function renderPost(postData, parent) {
   parent.append(postTemplate(postData));
 }
+*/
 
 // html structure
 /*
