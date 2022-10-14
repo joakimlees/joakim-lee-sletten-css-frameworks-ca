@@ -3,8 +3,6 @@ import * as listeners from "./handlers/index.mjs";
 
 const path = location.pathname;
 
-console.log("this " + path);
-
 switch (path) {
   case "/profile/login/":
     listeners.loginFormListener();
@@ -21,8 +19,10 @@ switch (path) {
     break;
   case "/post/edit/":
     listeners.updatePostListener();
+    listeners.removePostListener();
     break;
   case "/profile/":
+    listeners.createPostListener();
     templates.profile();
     break;
 }

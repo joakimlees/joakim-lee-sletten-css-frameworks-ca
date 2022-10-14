@@ -63,13 +63,16 @@
         </ul>
         <a class="link" href="#">See all contacts</a>
       </section>
-      <form action="#">
+      <h2 class="text-secondary mb-3 mt-5">Your posts</h2>
+      <form id="create-post-form">
         <div class="mb-3 rounded">
-          <label for="post" class="form-label text-white">Write new post</label>
-          <textarea class="post-field" id="post" rows="3" placeholder="Start writing your post here..." required></textarea>
+          <label for="title" class="form-label text-white">Give your post a title</label>
+          <input type="text" class="form-control" name="title" placeholder="Write your title here..." required />
+          <label for="post" class="form-label text-white mt-2">What do you want to share?</label>
+          <textarea name="body" class="post-field" id="post" rows="3" placeholder="Start writing your post here..." maxlength="150" required></textarea>
         </div>
         <div>
-          <button type="submit" class="btn btn-primary">Publish post</button>
+          <button class="btn btn-primary">Publish post</button>
         </div>
       </form>
       <form class="d-flex mt-5" role="search">
