@@ -1,9 +1,5 @@
-import { registerFormListener } from "./handlers/register.mjs";
-import { loginFormListener } from "./handlers/login.mjs";
 import * as templates from "./templates/index.mjs";
-import { createPostListener } from "./handlers/createPost.mjs";
-import { getPosts, updatePost } from "./api/posts/index.mjs";
-import { updatePostListener } from "./handlers/updatePost.mjs";
+import * as listeners from "./handlers/index.mjs";
 
 const path = location.pathname;
 
@@ -11,21 +7,22 @@ console.log("this " + path);
 
 switch (path) {
   case "/profile/login/":
-    loginFormListener();
+    listeners.loginFormListener();
     break;
   case "/profile/register/":
-    registerFormListener();
+    listeners.registerFormListener();
     break;
   case "/posts/":
-    createPostListener();
+    listeners.createPostListener();
     templates.posts();
     break;
   case "/post/":
     templates.post();
     break;
   case "/post/edit/":
-    updatePostListener();
+    listeners.updatePostListener();
     break;
   case "/profile/":
     templates.profile();
+    break;
 }

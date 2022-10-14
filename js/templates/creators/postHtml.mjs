@@ -93,15 +93,7 @@ export function postTemplate(postData) {
 
   return postsContainer;
 }
-/*
-export function renderPosts(postDataList, parent) {
-  parent.append(...postDataList.map(template));
-}
 
-export function renderPost(postData, parent) {
-  parent.append(template(postData));
-}
-*/
 // html structure
 /*
   <h2 class="text-white">Recent posts</h2>

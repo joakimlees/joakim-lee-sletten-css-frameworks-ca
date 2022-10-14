@@ -1,6 +1,6 @@
 import { API_SOCIAL_URL } from "../constants.mjs";
 import * as storage from "../../storage/index.mjs";
-import { UserObject } from "../../domains/user.mjs";
+import * as domain from "../../domains/index.mjs";
 
 const action = "/auth/login";
 const method = "post";
@@ -20,7 +20,7 @@ export async function login(profile) {
   const { accessToken, ...user } = await response.json();
 
   storage.save("token", accessToken);
-  storage.save("profile", new UserObject(user.name, user.email, user.avatar, user.banner));
+  storage.save("profile", new domain.UserObject(user.name, user.email, user.avatar, user.banner));
 
   console.log("login successful");
 }
