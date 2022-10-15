@@ -10,7 +10,15 @@ export async function getPosts() {
 
   const response = await authFetch(getPostsURL);
 
-  return await response.json();
+  const result = await response.json();
+
+  const newList = result.map((objects) => {
+    const posts = new PostObject(objects.author.name, objects.author.email, objects.id);
+    return posts;
+  });
+  console.log(newList);
+
+  //return await response.json();
 }
 
 export async function getPost(id) {
@@ -24,11 +32,10 @@ export async function getPost(id) {
 
   const response = await authFetch(getPostURL);
 
-  /*
   const { ...post } = await response.json();
 
   const postItem = new PostObject(post.author.name, post.author.email, post.id);
   console.log(postItem);
-*/
-  return await response.json();
+
+  // return await response.json();
 }
