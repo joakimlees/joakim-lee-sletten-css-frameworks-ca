@@ -54,29 +54,12 @@
       <form id="search-form-posts" class="d-flex mt-5" role="search">
         <input class="form-control me-2" type="search" name="searchField" id="searchField" placeholder="Search" aria-label="Search" />
       </form>
-      <form class="mt-4" id="sort-form-posts">
-        <fieldset>
-          <legend class="text-secondary">Sort by date:</legend>
-          <label class="me-4 text-white" for="sortDate">
-            Most recent first:
-            <input id="newestDate" name="sortDate" type="radio" value="newest" />
-          </label>
-          <label id="oldestDate" class="me-4 text-white" for="sortDate">
-            Oldest first:
-            <input name="sortDate" type="radio" value="oldest" />
-          </label>
-        </fieldset>
-      </form>
       <form class="mt-4" id="filter-form-posts">
         <fieldset>
           <legend class="text-secondary">Filter:</legend>
-          <label class="me-4 text-white" for="hasAvatar">
-            Only post from users with avatar:
-            <input name="hasAvatar" type="checkbox" />
-          </label>
-          <label class="me-4 text-white" for="today">
-            Only posts from today:
-            <input name="today" type="checkbox" />
+          <label class="me-4 text-white" for="usersPosts">
+            See only your posts:
+            <input name="usersPosts" type="checkbox" />
           </label>
         </fieldset>
       </form>

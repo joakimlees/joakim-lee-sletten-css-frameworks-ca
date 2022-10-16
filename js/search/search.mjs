@@ -10,7 +10,9 @@ export async function searchPosts() {
     const searchValue = event.target.value.trim().toLowerCase();
 
     const searchResult = posts.filter((post) => {
-      if (post.title.toLowerCase().includes(searchValue) || post.username.toLowerCase().includes(searchValue) || post.content.toLowerCase().includes(searchValue)) {
+      const { title, username, content } = post;
+
+      if (title.toLowerCase().includes(searchValue) || username.toLowerCase().includes(searchValue) || content.toLowerCase().includes(searchValue)) {
         return true;
       }
     });

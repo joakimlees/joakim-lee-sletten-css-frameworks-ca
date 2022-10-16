@@ -1,6 +1,7 @@
 import * as templates from "./templates/index.mjs";
 import * as listeners from "./handlers/index.mjs";
 import { searchPosts } from "./search/search.mjs";
+import { filterPosts } from "./search/filter.mjs";
 
 const path = location.pathname;
 
@@ -15,6 +16,7 @@ switch (path) {
     listeners.createPostListener();
     templates.posts();
     listeners.logOutListener();
+    searchPosts();
     break;
   case "/post/":
     templates.post();
@@ -32,35 +34,4 @@ switch (path) {
     break;
 }
 
-const testFormSort = document.querySelector("#sort-form-posts");
-const testFormFilter = document.querySelector("#filter-form-posts");
-
-// sort listener
-testFormSort.addEventListener("change", (event) => {
-  const sortValue = event.target.value;
-
-  if (sortValue === "newest") {
-    console.log("new");
-  } else if (sortValue === "oldest") {
-    console.log("old");
-  }
-});
-
-//filter listener
-testFormFilter.addEventListener("change", () => {
-  const hasAvatar = testFormFilter.hasAvatar.checked;
-  const today = testFormFilter.today.checked;
-
-  if (hasAvatar === true) {
-    console.log("show user with avatar");
-  } else if (hasAvatar === false) {
-    console.log("hide users with avatar");
-  }
-  if (today === true) {
-    console.log("show posts from today");
-  } else if (today === false) {
-    console.log("remove filter today posts");
-  }
-});
-
-searchPosts();
+filterPosts();
