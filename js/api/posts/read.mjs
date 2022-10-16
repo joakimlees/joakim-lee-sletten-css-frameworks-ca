@@ -24,25 +24,36 @@ export async function getPosts() {
     return postsList;
   });
 
-  console.log(newPostsList);
+  // console.log(newPostsList);
   //return newPostsList;
 }
 
-export async function getPost(id) {
-  if (!id) {
+export async function getPost(postId) {
+  if (!postId) {
     throw new Error("My own Error requires a postID to view a post");
   }
 
-  const postId = id;
+  const thisPostId = postId;
 
-  const getPostURL = `${API_SOCIAL_URL}${action}/${postId}${authorURL}`;
+  const getPostURL = `${API_SOCIAL_URL}${action}/${thisPostId}${authorURL}`;
 
   const response = await authFetch(getPostURL);
 
-  const { ...post } = await response.json();
+  const result = await response.json();
 
-  const postItem = new PostObject(post.author.name, post.author.email, post.id);
+  const author = result.author;
+
+  const { name, email, avatar } = author;
+
+  const { title, body, created, updated, id } = result;
+
+  const postItem = new PostObject(name, email, avatar, title, body, created, updated, id);
+
   console.log(postItem);
+  // const { ...post } = await response.json();
+
+  /*const postItem = new PostObject(post.author.name, post.author.email, post.id);
+   */
 
   // return await response.json();
 }
