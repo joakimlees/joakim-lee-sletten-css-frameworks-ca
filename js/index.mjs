@@ -1,5 +1,6 @@
 import * as templates from "./templates/index.mjs";
 import * as listeners from "./handlers/index.mjs";
+import { searchPosts } from "./search/search.mjs";
 
 const path = location.pathname;
 
@@ -34,6 +35,7 @@ switch (path) {
 const testFormSort = document.querySelector("#sort-form-posts");
 const testFormFilter = document.querySelector("#filter-form-posts");
 
+// sort listener
 testFormSort.addEventListener("change", (event) => {
   const sortValue = event.target.value;
 
@@ -44,6 +46,7 @@ testFormSort.addEventListener("change", (event) => {
   }
 });
 
+//filter listener
 testFormFilter.addEventListener("change", () => {
   const hasAvatar = testFormFilter.hasAvatar.checked;
   const today = testFormFilter.today.checked;
@@ -59,3 +62,5 @@ testFormFilter.addEventListener("change", () => {
     console.log("remove filter today posts");
   }
 });
+
+searchPosts();
