@@ -1,5 +1,6 @@
 import { load } from "../storage/index.mjs";
 
+// authentication function. Which returns the correct header for the user (with the token).
 export function headers() {
   const token = load("token");
 
@@ -9,6 +10,7 @@ export function headers() {
   };
 }
 
+// returns fetch, with the correct header.
 export async function authFetch(url, options = {}) {
   return fetch(url, {
     ...options,

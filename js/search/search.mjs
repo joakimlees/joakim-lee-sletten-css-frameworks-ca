@@ -1,6 +1,8 @@
 import { getPosts } from "../api/posts/read.mjs";
 import * as render from "../templates/render/posts.mjs";
 
+// function to search the post content feed
+// for title, username or content which includes the value typed in the search input field.
 export async function searchPosts() {
   const container = document.querySelector("#posts-container");
   const posts = await getPosts();
