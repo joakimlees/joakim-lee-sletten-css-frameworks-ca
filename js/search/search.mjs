@@ -14,6 +14,7 @@ export async function searchPosts() {
         return true;
       }
     });
-    console.log(searchResult);
+    container.innerHTML = "";
+    render.posts(searchResult, container);
   };
 }
