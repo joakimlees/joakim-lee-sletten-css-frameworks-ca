@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SoMe | Posts</title>
+    <title>SoMe | Edit post</title>
     <meta name="description" content="Home page for SoMe | social media app" />
     <link rel="stylesheet" href="/dist/css/styles.css" />
     <!--Link to remove fav icon error start-->
@@ -32,7 +32,7 @@
               <a class="nav-link active" href="../../posts/">Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../../profile/login/">Logout</a>
+              <a class="nav-link" id="logout-btn" href="../../index.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -40,15 +40,16 @@
     </nav>
     <main class="container">
       <h1 class="mt-5 mb-5 text-primary">Edit post</h1>
-      <form id="update-post-form">
+      <form id="edit-post-form">
         <div class="mb-3 rounded">
           <label for="title" class="form-label text-white">Edit title</label>
           <input type="text" class="form-control" name="title" required />
           <label for="post" class="form-label text-white mt-2">Edit post</label>
           <textarea name="body" class="post-field" id="post" rows="3" placeholder="Start writing your post here..." maxlength="150" required></textarea>
         </div>
-        <div>
-          <button class="btn btn-primary">Update post</button>
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-primary">Publish updated post</button>
+          <button class="btn btn-danger" type="button" id="delete-post-button">Delete post</button>
         </div>
       </form>
     </main>

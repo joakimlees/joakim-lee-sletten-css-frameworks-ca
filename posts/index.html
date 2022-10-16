@@ -32,7 +32,7 @@
               <a class="nav-link active" href="../posts/">Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="../profile/login/">Logout</a>
+              <a id="logout-btn" class="nav-link" href="../index.html">Logout</a>
             </li>
           </ul>
         </div>
@@ -51,11 +51,22 @@
           <button class="btn btn-primary">Publish post</button>
         </div>
       </form>
-      <form class="d-flex mt-5" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-primary" type="submit">Search</button>
+      <form id="search-form-posts" class="d-flex mt-5" role="search">
+        <input class="form-control me-2" type="search" name="searchField" id="searchField" placeholder="Search" aria-label="Search" />
       </form>
-      <section class="my-5" id="posts-container"></section>
+      <form class="mt-4" id="filter-form-posts">
+        <fieldset>
+          <legend class="text-secondary">Filter:</legend>
+          <label class="me-4 text-white" for="usersPosts">
+            See only your posts:
+            <input name="usersPosts" type="checkbox" />
+          </label>
+        </fieldset>
+      </form>
+      <section class="my-5">
+        <h2 class="text-primary">All posts</h2>
+        <div id="posts-container"></div>
+      </section>
     </main>
     <footer class="py-5 bg-primary">
       <div class="container">

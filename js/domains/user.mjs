@@ -1,5 +1,7 @@
+// class for user object
 export class UserObject {
-  constructor(name, email, avatar, banner) {
+  constructor(id, name, email, avatar, banner) {
+    this.id = id;
     this.username = name;
     this.email = email;
     this.image = avatar;
