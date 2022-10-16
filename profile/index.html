@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoMe | Profile</title>
+    <meta name="description" content="Profile page for SoMe | social media app" />
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <!--Link to remove fav icon error start-->
+    <link rel="icon" href="data:;base64,=" />
+    <!--Link to remove fav icon error end-->
+    <script src="../../js/index.mjs" type="module" defer></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" defer></script>
+  </head>
+  <body class="bg-md-dark-gray">
+    <header class="bg-primary d-flex justify-content-center border-bottom border-white">
+      <a class="text-decoration-none text-dark" href="../">SoMe</a>
+    </header>
+    <nav class="navbar navbar-expand-md navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/index.html">SoMe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/profile/">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/posts/">Posts</a>
+            </li>
+            <li class="nav-item">
+              <a id="logout-btn" class="nav-link" href="../index.html">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <section class="row p-3 pb-5 mt-3">
+        <div class="col">
+          <h1 class="row text-primary">@Username</h1>
+          <p class="row text-white">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi facere aperiam corrupti reprehenderit hic reiciendis laudantium perferendis minus expedita, esse, maxime rem dolorem, eum dolores quos nulla odit eveniet natus.</p>
+        </div>
+        <div class="col col-md-4">
+          <img class="profile-image rounded shadow-sm" src="/images/Joakim_fullstakk.jpg" alt="" />
+        </div>
+      </section>
+      <section class="container p-3 mb-5 border-top border-bottom border-md-light-gray">
+        <h2 class="text-white">Contacts</h2>
+        <ul class="row list-unstyled ms-1">
+          <a class="col col-lg-2" href="#"
+            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
+          >
+          <a class="col col-lg-2" href="#"
+            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
+          >
+          <a class="col col-lg-2" href="#"
+            ><li class="text-secondary"><img class="row contact-image rounded" src="/images/Hege_fullstakk.jpg" alt="" />@username</li></a
+          >
+        </ul>
+        <a class="link" href="#">See all contacts</a>
+      </section>
+      <h2 class="text-secondary mb-3 mt-5">Create Post</h2>
+      <form id="create-post-form">
+        <div class="mb-3 rounded">
+          <label for="title" class="form-label text-white">Give your post a title</label>
+          <input type="text" class="form-control" name="title" placeholder="Write your title here..." required />
+          <label for="post" class="form-label text-white mt-2">What do you want to share?</label>
+          <textarea name="body" class="post-field" id="post" rows="3" placeholder="Start writing your post here..." maxlength="150" required></textarea>
+        </div>
+        <div>
+          <button class="btn btn-primary">Publish post</button>
+        </div>
+      </form>
+      <section class="my-5">
+        <h2 class="text-secondary">Your posts</h2>
+        <div id="profile-posts-container"></div>
+      </section>
+    </main>
+    <footer class="py-5 bg-primary">
+      <div class="container">
+        <a class="text-decoration-none text-dark" href="#">SoMe - Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>
