@@ -12,13 +12,20 @@ export async function getPosts() {
 
   const result = await response.json();
 
-  const newList = result.map((objects) => {
-    const posts = new PostObject(objects.author.name, objects.author.email, objects.id);
-    return posts;
-  });
-  console.log(newList);
+  const newPostsList = result.map((post) => {
+    const author = post.author;
 
-  //return await response.json();
+    const { name, email, avatar } = author;
+
+    const { title, body, created, updated, id } = post;
+
+    const postsList = new PostObject(name, email, avatar, title, body, created, updated, id);
+
+    return postsList;
+  });
+
+  console.log(newPostsList);
+  //return newPostsList;
 }
 
 export async function getPost(id) {
