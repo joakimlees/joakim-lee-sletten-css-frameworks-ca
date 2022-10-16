@@ -16,11 +16,9 @@ export async function filterPosts() {
     const usersPosts = filterForm.usersPosts.checked;
 
     if (usersPosts === true) {
-      console.log("true");
       container.innerHTML = "";
       render.posts(filteredUserPost, container);
     } else if (usersPosts === false) {
-      console.log("false");
       container.innerHTML = "";
       render.posts(allPosts, container);
     }

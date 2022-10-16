@@ -6,6 +6,7 @@ import * as ux from "../../components/ui/index.mjs";
 const action = "/auth/login";
 const method = "post";
 
+// function which takes in the parameter profile
 export async function login(profile) {
   const loginURL = API_SOCIAL_URL + action;
   const body = JSON.stringify(profile);

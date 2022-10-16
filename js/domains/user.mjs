@@ -1,3 +1,4 @@
+// class for user object
 export class UserObject {
   constructor(name, email, avatar, banner) {
     this.username = name;

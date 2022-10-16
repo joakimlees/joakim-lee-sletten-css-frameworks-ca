@@ -1,7 +1,6 @@
 import * as templates from "./templates/index.mjs";
 import * as listeners from "./handlers/index.mjs";
-import { searchPosts } from "./search/search.mjs";
-import { filterPosts } from "./search/filter.mjs";
+import * as filters from "./search/index.mjs";
 
 const path = location.pathname;
 
@@ -16,7 +15,8 @@ switch (path) {
     listeners.createPostListener();
     templates.posts();
     listeners.logOutListener();
-    searchPosts();
+    filters.searchPosts();
+    filters.filterPosts();
     break;
   case "/post/":
     templates.post();
@@ -33,5 +33,3 @@ switch (path) {
     listeners.logOutListener();
     break;
 }
-
-filterPosts();
