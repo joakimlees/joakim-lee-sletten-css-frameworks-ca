@@ -24,7 +24,7 @@ export async function getPosts() {
     return postsList;
   });
 
-  // console.log(newPostsList);
+  return newPostsList;
   //return newPostsList;
 }
 
@@ -47,9 +47,9 @@ export async function getPost(postId) {
 
   const { title, body, created, updated, id } = result;
 
-  const postItem = new PostObject(name, email, avatar, title, body, created, updated, id);
+  const newPostItem = new PostObject(name, email, avatar, title, body, created, updated, id);
 
-  console.log(postItem);
+  return newPostItem;
   // const { ...post } = await response.json();
 
   /*const postItem = new PostObject(post.author.name, post.author.email, post.id);

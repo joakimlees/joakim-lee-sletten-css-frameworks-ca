@@ -13,7 +13,7 @@ export async function updatePostListener() {
     const post = await postMethods.getPost(id);
 
     form.title.value = post.title;
-    form.body.value = post.body;
+    form.body.value = post.content;
 
     button.disabled = false;
 

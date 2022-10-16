@@ -19,7 +19,7 @@ export function postTemplate(postData) {
   const primaryButton = document.createElement("button");
   const secondaryButton = document.createElement("button");
 
-  const postCreated = postData.created.slice(0, 10);
+  const postCreated = postData.published.slice(0, 10);
   const postUpdated = postData.updated.slice(0, 10);
 
   postsContainer.classList.add("container", "my-4", "p-3", "rounded", "shadow-sm");
@@ -53,20 +53,20 @@ export function postTemplate(postData) {
   buttonWrapper.appendChild(primaryButton);
   buttonWrapper.appendChild(secondaryButton);
 
-  username.innerText = "@" + postData.author.name;
+  username.innerText = "@" + postData.username;
   postTitle.innerText = postData.title;
-  postContent.innerHTML = postContent.innerHTML + postData.body;
+  postContent.innerHTML = postContent.innerHTML + postData.content;
   primaryButton.innerText = "View post";
   secondaryButton.innerText = "Edit post";
 
   // Check if the post belong to the user, if not hide the edit button
-  if (postData.author.email !== profile.email) {
+  if (postData.email !== profile.email) {
     secondaryButton.classList.add("d-none");
   }
 
   if (location.pathname === "/post/") {
     primaryButton.classList.add("d-none");
-  } else if (location.pathname === "/post/" && postData.author.email !== profile.email) {
+  } else if (location.pathname === "/post/" && postData.email !== profile.email) {
     primaryButton.classList.add("d-none");
     secondaryButton.classList.add("d-none");
   }
@@ -80,12 +80,12 @@ export function postTemplate(postData) {
   });
 
   // Check if user got an avatar, if not, set a default image
-  switch (postData.author.avatar) {
+  switch (postData.avatar) {
     case null || undefined || "":
       postAvatar.src = "../../../images/some-default-avatar.jpg";
       break;
     default:
-      postAvatar.src = postData.author.avatar;
+      postAvatar.src = postData.avatar;
   }
 
   dateCreated.innerText = "created: " + postCreated;

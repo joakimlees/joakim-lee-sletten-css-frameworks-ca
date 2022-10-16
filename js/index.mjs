@@ -1,5 +1,8 @@
 import * as templates from "./templates/index.mjs";
 import * as listeners from "./handlers/index.mjs";
+import { logOut } from "./api/auth/logout.mjs";
+
+logOut();
 
 const path = location.pathname;
 

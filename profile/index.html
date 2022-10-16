@@ -29,10 +29,10 @@
               <a class="nav-link active" aria-current="page" href="/profile/">Profile</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/posts">Posts</a>
+              <a class="nav-link" href="/posts/">Posts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./login/">Logout</a>
+              <a id="logout-btn" class="nav-link" href="./login/">Logout</a>
             </li>
           </ul>
         </div>
@@ -63,7 +63,7 @@
         </ul>
         <a class="link" href="#">See all contacts</a>
       </section>
-      <h2 class="text-secondary mb-3 mt-5">Your posts</h2>
+      <h2 class="text-secondary mb-3 mt-5">Create Post</h2>
       <form id="create-post-form">
         <div class="mb-3 rounded">
           <label for="title" class="form-label text-white">Give your post a title</label>
@@ -80,7 +80,7 @@
         <button class="btn btn-primary">Search</button>
       </form>
       <section class="my-5">
-        <h2>All posts</h2>
+        <h2 class="text-secondary">Your posts</h2>
         <div id="profile-posts-container"></div>
       </section>
     </main>

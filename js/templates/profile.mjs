@@ -9,7 +9,7 @@ export async function profile() {
 
   const container = document.querySelector("#profile-posts-container");
 
-  const profileEmail = allPosts.filter(({ author: { email } }) => {
+  const profileEmail = allPosts.filter(({ email }) => {
     return email === profile.email;
   });
 
